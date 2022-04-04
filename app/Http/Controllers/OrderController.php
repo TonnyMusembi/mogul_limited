@@ -28,7 +28,6 @@ class OrderController extends Controller
             return response()->json(['status' => 422, 'errors' => $validator->errors()]);
         } else {
 
-
         Order::create([
             'vehicle_id' => $request->input('vehicle_id'),
             'status' => $request->input('status'),
@@ -41,6 +40,7 @@ class OrderController extends Controller
     public function create()
     {
 
-        return view('order.create');
+        //return view('order.create');
+        return response()->json();
     }
 }
